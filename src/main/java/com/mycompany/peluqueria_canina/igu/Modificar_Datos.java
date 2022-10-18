@@ -2,6 +2,8 @@ package com.mycompany.peluqueria_canina.igu;
 
 import com.mycompany.peluqueria_canina.logica.Controladora;
 import com.mycompany.peluqueria_canina.logica.Mascota;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 public class Modificar_Datos extends javax.swing.JFrame {
 
@@ -277,6 +279,12 @@ public class Modificar_Datos extends javax.swing.JFrame {
         Ver_Datos pantalla = new Ver_Datos();
         pantalla.setVisible(true);
         pantalla.setLocationRelativeTo(null);
+        
+        JOptionPane infoPanel = new JOptionPane("Se guardó correctamente!");
+        infoPanel.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialog = infoPanel.createDialog("IMPORTANTE");
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
         
         this.dispose(); //Cerrar ventana
     }//GEN-LAST:event_btnGuardarCambiosActionPerformed
